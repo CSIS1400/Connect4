@@ -8,7 +8,7 @@ public class Board{
    char[] rowFive  = {'O', 'O', 'O', 'O', 'O', 'O', 'O'};
    char[] rowSix   = {'O', 'O', 'O', 'O', 'O', 'O', 'O'};
    
-   ConnectPlayer cp = new ConnectPlayer();
+   Player cp = new ConnectPlayer();
    
    public void printBoard() {
       System.out.println(Arrays.toString(rowOne));

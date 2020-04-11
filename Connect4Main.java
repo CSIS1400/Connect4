@@ -1,4 +1,4 @@
-public class AttemptConnect4 {
+public class Connect4Main {
 
    public static void main (String[] args) {
          

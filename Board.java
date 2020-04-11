@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class ConnectBrain {
+public class Board{
    
    char[] rowOne   = {'O', 'O', 'O', 'O', 'O', 'O', 'O'};
    char[] rowTwo   = {'O', 'O', 'O', 'O', 'O', 'O', 'O'};

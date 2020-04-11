@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ConnectPlayer {
+public class Player {
 
    static Scanner input = new Scanner(System.in);
    static int decider = 0;

@@ -34,9 +34,9 @@ public class Player {
    
    public static void intro(){
       System.out.println("How To Play:");
-      System.out.println("Player1 = R and Player2 = Y\n"+
+      System.out.println("Player1 = X and Player2 = O\n"+
          "Players will take turns choosing a row by selecting a number 1-7\n"+
-         "The goal is to connect four of your pieces in a row in any direction\n");
+         "To win, connect four of your pieces either horizontally, vertically, or diagonally\n");
    }
 
 

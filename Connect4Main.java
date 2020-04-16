@@ -6,7 +6,6 @@ public class Connect4Main {
       Board board = new Board();
       int choice;
       do{
-      player.intro();
       board.printBoard();
       player.playerInstructions();
       choice = player.playerSelection();

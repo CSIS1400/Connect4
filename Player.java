@@ -33,8 +33,11 @@ public class Player {
       return player;
    }
    
-      //test
-      
+   public static void intro(){
+      System.out.println("How To Play:");
+      System.out.println("Player 1 (R) and Player 2 (Y)\n"+
+         "will take turns choosing a row by selecting a number 1-7");
+   }
 
 
 }

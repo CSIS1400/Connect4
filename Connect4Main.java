@@ -4,8 +4,8 @@ public class Connect4Main {
       
       Player player = new Player();
       Board board = new Board();
-      do{
       player.intro();
+      do{
       board.printBoard();
       int choice = player.playerSelection();
       board.columnSelector(choice);

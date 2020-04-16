@@ -4,6 +4,7 @@ public class Connect4Main {
       
       Player player = new Player();
       Board board = new Board();
+      player.intro();
       int choice;
       do{
       board.printBoard();

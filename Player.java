@@ -1,4 +1,4 @@
-import java.util.Scan
+import java.util.Scanner;
 public class Player {
 
    static Scanner input = new Scanner(System.in);

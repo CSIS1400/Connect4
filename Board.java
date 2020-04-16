@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Board{
-   // multi
+   // multidimensional array for board values
    char[][] boardArray = {{'-', '-', '-', '-', '-', '-', '-'},
                           {'-', '-', '-', '-', '-', '-', '-'},
                           {'-', '-', '-', '-', '-', '-', '-'},
@@ -10,12 +10,17 @@ public class Board{
                           {'-', '-', '-', '-', '-', '-', '-'}};
                        
    
-   
+   // print method
    public void printBoard(){
    
    }
    
+   // places player's piece in column
    public int columnSelector(int userInput){
+      
+         
+         
+       
       
    return 0;
    }

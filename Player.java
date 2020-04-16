@@ -3,10 +3,10 @@ public class Player {
 
    static Scanner input = new Scanner(System.in);
    static int decider = 0;
-   char player = 'R';
+   char player = 'X';
    
    public int playerSelection() {
-      if(player == 'R'){
+      if(player == 'X'){
          System.out.println("*** Player 1's Turn ***");
          System.out.print("Enter a column number 1-7: ");
       }else{
@@ -25,9 +25,9 @@ public class Player {
    public int decider() {
       decider = decider + 1;
       if(decider % 2 == 1){
-         player = 'R';
+         player = 'X';
       }else{
-         player = 'Y';
+         player = 'O';
       }
       return player;
    }

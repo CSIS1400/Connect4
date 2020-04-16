@@ -7,7 +7,8 @@ public class Connect4Main {
       do{
       player.intro();
       board.printBoard();
-      board.columnSelector(player.playerSelection());
+      int choice = player.playerSelection();
+      board.columnSelector(choice);
       }while(player.playerSelection() != -1);
    }
 } 

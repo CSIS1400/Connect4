@@ -2,7 +2,32 @@ import java.util.Arrays;
 
 public class Board{
    // multi
-   char[][] myArray = new char[6][7];
+   char[][] boardArray = {{'-', '-', '-', '-', '-', '-', '-'},
+                          {'-', '-', '-', '-', '-', '-', '-'},
+                          {'-', '-', '-', '-', '-', '-', '-'},
+                          {'-', '-', '-', '-', '-', '-', '-'},
+                          {'-', '-', '-', '-', '-', '-', '-'},
+                          {'-', '-', '-', '-', '-', '-', '-'}};
+                       
+   
+   
+   public void printBoard(){
+   
+   }
+   
+   public int columnSelector(int userInput){
+      
+   return 0;
+   }
+
+   
+   
+   
+   
+   
+   
+      
+   
    
    
 }

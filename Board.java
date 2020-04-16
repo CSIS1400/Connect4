@@ -1,6 +1,9 @@
 import java.util.Arrays;
 
 public class Board{
+   
+   Player player = new Player();
+
    // multidimensional array for board values
    char[][] boardArray = {{'-', '-', '-', '-', '-', '-', '-'},
                           {'-', '-', '-', '-', '-', '-', '-'},
@@ -18,12 +21,17 @@ public class Board{
    }
    
    // places player's piece in column
-   public int columnSelector(int userInput){
+   public int columnSelector(int column){
+      if(boardArray[0][column] != '-'){
+         System.out.println("Column is full! Pick another column: ");
+      }
       
+      for (int row = boardArray.length; row >= 0; row--){
+         if (boardArray[row][column] == '-'){
          
+         }
          
-       
-      
-   return 0;
+      }
+      return 0;
    }
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Player {
 
    static Scanner input = new Scanner(System.in);
-   static int decider = 0;
+   static int turn = 0;
    char player = 'X';
    
    public int playerSelection() {
@@ -22,9 +22,9 @@ public class Player {
       return selection;    
    }
    
-   public int decider() {
-      decider = decider + 1;
-      if(decider % 2 == 1){
+   public char decider() {
+      turn = turn + 1;
+      if(turn % 2 == 1){
          player = 'X';
       }else{
          player = 'O';

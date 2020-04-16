@@ -5,7 +5,7 @@ public class Player {
    static int turn = 0;
    char player = 'X';
    
-   public int playerSelection() {
+   public void playerInstructions() {
       if(player == 'X'){
          System.out.println("*** Player 1's Turn ***");
          System.out.print("Enter a column number 1-7: ");
@@ -13,13 +13,17 @@ public class Player {
          System.out.println("*** Player 2's Turn ***");
          System.out.print("Enter a column number 1-7: ");
       }
+         
+   }
+   
+   public int playerSelection(){
       int selection = input.nextInt();
       System.out.println();
       while(selection <= 0 || selection >= 8){
-         System.out.print("Please Enter A Valid Number 1-9: ");
+         System.out.print("Please Enter A Valid Number 1-7: ");
          selection = input.nextInt();
       }
-      return selection;    
+      return selection; 
    }
    
    public char decider() {

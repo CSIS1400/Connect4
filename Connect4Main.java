@@ -4,11 +4,13 @@ public class Connect4Main {
       
       Player player = new Player();
       Board board = new Board();
+      int choice;
       do{
       player.intro();
       board.printBoard();
-      int choice = player.playerSelection();
+      player.playerInstructions();
+      choice = player.playerSelection();
       board.columnSelector(choice);
-      }while(player.playerSelection() != -1);
+      }while(choice != -1);
    }
 } 

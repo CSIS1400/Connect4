@@ -33,16 +33,17 @@ public class Board{
    
    // places player's piece in column
    public void columnSelector(int column){
-      if(boardArray[0][column] != '-'){
+
+      if(boardArray[0][column - 1] != '-'){
          System.out.println("Column is full! Pick another column: ");
-      }
-      
-      for (int row = boardArray.length-1; row >= 0; row--){
-         if(boardArray[row][column] == '-'){
-            boardArray[row][column] = player.decider();
+      }else{
+         for (int row = boardArray.length-1; row >= 0; row--){
+            if(boardArray[row][column - 1] == '-'){
+               boardArray[row][column - 1] = player.decider();
+               break;
+            }
          
          }
-         
       }
    }
 }

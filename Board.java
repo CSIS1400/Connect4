@@ -50,4 +50,47 @@ public class Board{
          }
       
    }
+   
+   public static boolean checkForWin(char[][]board){
+      // horizontally
+      for (int row = 0; row < board.length; row++){
+         for (int col = 0; col < board[row].length - 3; col++){
+         if (board[row][col] != '-' && board[row][col] == board[row][col+1] &&
+            board[row][col] == board[row][col+2] && board[row][col] == board[row][col+3]){
+               return true;
+            }      
+         }
+      }
+        // vertical
+      for (int col = 0; col < board[0].length; col++){
+         for (int row = 0; row < board.length - 3; row++){
+            if (board[row][col] != '-' && board[row][col] == board[row+1][col] &&
+               board[row][col] == board[row+2][col] && board[row][col] == board[row+3][col]){
+                  return true;
+         }
+      }
+   }
+         // diagonally from top left
+      for (int row = 0; row < board.length - 3; row++){
+         for (int col = 0; col < board[row].length - 3; col++){
+            if (board[row][col] != '-' && board[row][col] == board[row+1][col
+               +1] && board[row][col] == board[row+2][col+2] && board[row][col] ==
+                  board[row+3][col+3]){
+                     return true;
+         }
+       }
+   }  
+         // diagonally from top right
+   for (int row = 0; row < board.length - 3; row++){
+        for (int col = 3; col < board[row].length; col++){
+            if (board[row][col] != '-' && board[row][col] == board[row+1]
+               [col-1] && board[row][col] == board[row+2][col-2] && board[row]
+                  [col] == board[row+3][col-3]){
+                     return true;
+            }
+         }
+     }
+      return result;
+   }
 }
+

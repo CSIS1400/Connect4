@@ -11,6 +11,8 @@ public class Connect4Main {
       player.playerInstructions();
       choice = player.playerSelection();
       board.columnSelector(choice);
-      }while(choice != -1);
+      System.out.println(board.win);
+      }while(board.win == false);
+      board.printBoard();
    }
 } 

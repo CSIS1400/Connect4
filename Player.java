@@ -3,14 +3,15 @@ public class Player {
 
    static Scanner input = new Scanner(System.in);
    static int turn = 0;
-   char player = 'X';
+   char player = decider();
    
    public void playerInstructions() {
-      if(player == 'X'){
-         System.out.println("*** Player 1's Turn ***");
+      Player playerTurn = new Player();
+      if(playerTurn.decider() != 'X'){
+         System.out.println("   *X* Player 1's Turn *X*");
          System.out.print("Enter a column number 1-7: ");
       }else{
-         System.out.println("*** Player 2's Turn ***");
+         System.out.println("*O* Player 2's Turn *O*");
          System.out.print("Enter a column number 1-7: ");
       }
          

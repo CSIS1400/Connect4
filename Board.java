@@ -5,14 +5,15 @@ public class Board{
    
    Player player = new Player();
    Scanner input = new Scanner(System.in);
+   public static boolean win;
 
    // multidimensional array for board values
-   char[][] boardArray = {{'-', '-', '-', '-', '-', '-', '-'},
-                          {'-', '-', '-', '-', '-', '-', '-'},
-                          {'-', '-', '-', '-', '-', '-', '-'},
-                          {'-', '-', '-', '-', '-', '-', '-'},
-                          {'-', '-', '-', '-', '-', '-', '-'},
-                          {'-', '-', '-', '-', '-', '-', '-'}};
+   static char[][] boardArray = {{'-', '-', '-', '-', '-', '-', '-'},
+                                 {'-', '-', '-', '-', '-', '-', '-'},
+                                 {'-', '-', '-', '-', '-', '-', '-'},
+                                 {'-', '-', '-', '-', '-', '-', '-'},
+                                 {'-', '-', '-', '-', '-', '-', '-'},
+                                 {'-', '-', '-', '-', '-', '-', '-'}};
                        
    
    // print method
@@ -44,6 +45,7 @@ public class Board{
          for (int row = boardArray.length-1; row >= 0; row--){
             if(boardArray[row][column - 1] == '-'){
                boardArray[row][column - 1] = player.decider();
+               checkForWin();
                break;
             }
          
@@ -51,46 +53,46 @@ public class Board{
       
    }
    
-   public static boolean checkForWin(char[][]board){
+   public static boolean checkForWin(){
       // horizontally
-      for (int row = 0; row < board.length; row++){
-         for (int col = 0; col < board[row].length - 3; col++){
-         if (board[row][col] != '-' && board[row][col] == board[row][col+1] &&
-            board[row][col] == board[row][col+2] && board[row][col] == board[row][col+3]){
-               return true;
+      for (int row = 0; row < boardArray.length; row++){
+         for (int col = 0; col < boardArray[row].length - 3; col++){
+         if (boardArray[row][col] != '-' && boardArray[row][col] == boardArray[row][col+1] &&
+            boardArray[row][col] == boardArray[row][col+2] && boardArray[row][col] == boardArray[row][col+3]){
+               return win = true;
             }      
          }
       }
         // vertical
-      for (int col = 0; col < board[0].length; col++){
-         for (int row = 0; row < board.length - 3; row++){
-            if (board[row][col] != '-' && board[row][col] == board[row+1][col] &&
-               board[row][col] == board[row+2][col] && board[row][col] == board[row+3][col]){
-                  return true;
+      for (int col = 0; col < boardArray[0].length; col++){
+         for (int row = 0; row < boardArray.length - 3; row++){
+            if (boardArray[row][col] != '-' && boardArray[row][col] == boardArray[row+1][col] &&
+               boardArray[row][col] == boardArray[row+2][col] && boardArray[row][col] == boardArray[row+3][col]){
+                  return win = true;
          }
       }
    }
          // diagonally from top left
-      for (int row = 0; row < board.length - 3; row++){
-         for (int col = 0; col < board[row].length - 3; col++){
-            if (board[row][col] != '-' && board[row][col] == board[row+1][col
-               +1] && board[row][col] == board[row+2][col+2] && board[row][col] ==
-                  board[row+3][col+3]){
-                     return true;
+      for (int row = 0; row < boardArray.length - 3; row++){
+         for (int col = 0; col < boardArray[row].length - 3; col++){
+            if (boardArray[row][col] != '-' && boardArray[row][col] == boardArray[row+1][col
+               +1] && boardArray[row][col] == boardArray[row+2][col+2] && boardArray[row][col] ==
+                  boardArray[row+3][col+3]){
+                     return win = true;
          }
        }
    }  
          // diagonally from top right
-   for (int row = 0; row < board.length - 3; row++){
-        for (int col = 3; col < board[row].length; col++){
-            if (board[row][col] != '-' && board[row][col] == board[row+1]
-               [col-1] && board[row][col] == board[row+2][col-2] && board[row]
-                  [col] == board[row+3][col-3]){
-                     return true;
+   for (int row = 0; row < boardArray.length - 3; row++){
+        for (int col = 3; col < boardArray[row].length; col++){
+            if (boardArray[row][col] != '-' && boardArray[row][col] == boardArray[row+1]
+               [col-1] && boardArray[row][col] == boardArray[row+2][col-2] && boardArray[row]
+                  [col] == boardArray[row+3][col-3]){
+                     return win = true;
             }
          }
      }
-      return result;
+      return win = false;
    }
 }
 

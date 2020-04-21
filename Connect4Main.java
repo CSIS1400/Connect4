@@ -18,6 +18,7 @@ public class Connect4Main {
       player.playerInstructions();
       choice = player.playerSelection();
       board.columnSelector(choice);
+      board.checkTie();
       }while(board.win == false && board.tie != true);
       board.printBoard();
       player.winMessage();

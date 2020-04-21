@@ -1,3 +1,10 @@
+/*****************************************
+* Names: Scott Stebbings, Caleb McFalls, *
+* Aaron Hansen                           *
+* CSIS 1400                              *
+* Group assignment Connect 4             *
+*                                        *
+*****************************************/
 import java.util.Scanner;
 public class Player {
 

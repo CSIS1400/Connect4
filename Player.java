@@ -54,10 +54,10 @@ public class Player {
    public void winMessage(){
       if(player != 'X'){
          System.out.println("PLayer 1 has won!!");
-         } 
-         else{
-            System.out.println("PLayer 2 has won!!");
-         }  
+      } 
+      else{
+         System.out.println("PLayer 2 has won!!");
+      }  
       
    }
 

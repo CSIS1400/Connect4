@@ -21,5 +21,6 @@ public class Connect4Main {
       System.out.println(board.win);
       }while(board.win == false);
       board.printBoard();
+      System.out.printf("%c has won!",player);
    }
 } 

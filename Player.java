@@ -51,5 +51,4 @@ public class Player {
          "To win, connect four of your pieces either horizontally, vertically, or diagonally\n");
    }
 
-
 }

@@ -49,7 +49,7 @@ public class Board{
 
       while(boardArray[0][column - 1] != '-'){
          System.out.print("Column is full! Pick another column: ");
-         column = input.nextInt();
+         column = player.playerSelection();
   
       }
          for (int row = boardArray.length-1; row >= 0; row--){

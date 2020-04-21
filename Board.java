@@ -16,7 +16,7 @@ public class Board{
    Player player = new Player();
    Scanner input = new Scanner(System.in);
    public static boolean win;
-
+   public static boolean tie;
    // multidimensional array for board values
    static char[][] boardArray = {{'-', '-', '-', '-', '-', '-', '-'},
                                  {'-', '-', '-', '-', '-', '-', '-'},
@@ -61,6 +61,18 @@ public class Board{
          
          }
       
+   }
+   
+   public boolean checkTie(){
+      for (int col = 0; col < boardArray[6].length; col++)
+          if(boardArray[0][col] != '-'){
+            tie = true;
+          }
+          else
+          { 
+          tie = false;
+          }   
+        return tie;
    }
    
    public static boolean checkForWin(){

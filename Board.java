@@ -63,8 +63,8 @@ public class Board{
       
    }
    
-   public boolean checkTie(){
-      for (int col = 0; col < boardArray[6].length; col++)
+   public void checkTie(){
+      for (int col = 0; col < boardArray[5].length; col++)
           if(boardArray[0][col] != '-'){
             tie = true;
           }
@@ -72,7 +72,7 @@ public class Board{
           { 
           tie = false;
           }   
-        return tie;
+        
    }
    
    public static boolean checkForWin(){

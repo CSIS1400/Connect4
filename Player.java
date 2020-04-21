@@ -50,5 +50,15 @@ public class Player {
          "Players will take turns choosing a row by selecting a number 1-7\n"+
          "To win, connect four of your pieces either horizontally, vertically, or diagonally\n");
    }
+   
+   public void winMessage(){
+      if(player != 'X'){
+         System.out.println("PLayer 1 has won!!");
+         } 
+         else{
+            System.out.println("PLayer 2 has won!!");
+         }  
+      
+   }
 
 }

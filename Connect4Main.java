@@ -18,9 +18,9 @@ public class Connect4Main {
       player.playerInstructions();
       choice = player.playerSelection();
       board.columnSelector(choice);
-      System.out.println(board.win);
       }while(board.win == false);
       board.printBoard();
-      System.out.printf("%c has won!",player);
+      player.winMessage();
+      
    }
 } 

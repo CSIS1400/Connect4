@@ -1,3 +1,13 @@
+/*****************************************
+* Names: Scott Stebbings, Caleb McFalls, *
+* Aaron Hansen                           *
+* CSIS 1400                              *
+* Group assignment Connect 4             *
+*                                        *
+*****************************************/
+
+
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -83,6 +93,7 @@ public class Board{
        }
    }  
          // diagonally from top right
+<<<<<<< HEAD
    for (int row = 0; row < boardArray.length - 3; row++){
         for (int col = 3; col < boardArray[row].length; col++){
             if (boardArray[row][col] != '-' && boardArray[row][col] == boardArray[row+1]
@@ -93,6 +104,18 @@ public class Board{
          }
      }
       return win = false;
+=======
+      for (int row = 0; row < board.length - 3; row++){
+        for (int col = 3; col < board[row].length; col++){
+            if (board[row][col] != '-' && board[row][col] == board[row+1]
+               [col-1] && board[row][col] == board[row+2][col-2] && board[row]
+                  [col] == board[row+3][col-3]){
+                     return true;
+            }
+         }
+     }
+      return false;
+>>>>>>> 1dbe895edc8464aca6cc391ef892cd66861bff8c
    }
 }
 

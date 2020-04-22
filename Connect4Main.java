@@ -18,9 +18,14 @@ public class Connect4Main {
       player.playerInstructions();
       choice = player.playerSelection();
       board.columnSelector(choice);
-      }while(board.win == false && board.tie != true);
-      board.printBoard();
-      player.winMessage();
+      }while(board.win == false && board.checkTie() != true);
+      if(board.win == true){
+         board.printBoard();
+         player.winMessage();
+      }else{
+         board.checkTie();
+         System.out.println("You tied!");
+      }
       
    }
 } 

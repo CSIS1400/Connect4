@@ -56,6 +56,7 @@ public class Board{
             if(boardArray[row][column - 1] == '-'){
                boardArray[row][column - 1] = player.decider();
                checkForWin();
+               checkTie();
                break;
             }
          
@@ -63,16 +64,15 @@ public class Board{
       
    }
    
-   public void checkTie(){
-      for (int col = 0; col < boardArray[5].length; col++)
+   public boolean checkTie(){
+      for (int col = 0; col < boardArray[5].length; col++){
           if(boardArray[0][col] != '-'){
             tie = true;
-          }
-          else
-          { 
-          tie = false;
-          }   
-        
+          }else{ 
+            tie = false;
+          } 
+      } 
+      return tie;
    }
    
    public static boolean checkForWin(){

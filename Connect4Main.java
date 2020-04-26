@@ -23,8 +23,9 @@ public class Connect4Main {
          board.printBoard();
          player.winMessage();
       }else{
+         board.printBoard();
          board.checkTie();
-         System.out.println("You tied!");
+         System.out.println("It's a tie!");
       }
       
    }

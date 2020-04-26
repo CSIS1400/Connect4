@@ -12,6 +12,7 @@ public class Player {
    static int turn = 0;
    char player = decider();
    
+   
    public void playerInstructions() {
       Player playerTurn = new Player();
       if(playerTurn.decider() != 'X'){
@@ -25,15 +26,24 @@ public class Player {
    }
    
    public int playerSelection(){
-      int selection = input.nextInt();
-      System.out.println();
-      while(selection <= 0 || selection >= 8){
-         System.out.print("Please Enter A Valid Number 1-7: ");
-         selection = input.nextInt();
-      }
-      return selection; 
-   }
-   
+ int selection = 0;
+ boolean isValid = false;
+ while(!isValid){
+     try {
+      selection = input.nextInt();
+    } catch (Exception e) {
+      input.next();
+      selection = 0;
+    }
+    if( selection <= 7 && selection >= 1 ){
+    isValid = true;
+  } else {
+    System.out.print("Please Enter A Valid Number 1-7: ");
+  }
+  }
+  System.out.println();
+  return selection;
+}
    public char decider() {
       turn = turn + 1;
       if(turn % 2 == 1){
